@@ -3,7 +3,6 @@ import Nav from 'components/organisms/Nav';
 import GlobalStyle from 'templates/GlobalStyle';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Notification from 'components/helpers/Notification';
 
 const MainWrapper = styled.div`
   max-width: 1024px;
@@ -18,7 +17,6 @@ const MainTemplate = ({ children }) => {
       <GlobalStyle />
       <Nav />
       {children}
-      <Notification />
     </MainWrapper>
   );
 };

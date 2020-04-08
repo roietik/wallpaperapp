@@ -1,6 +1,6 @@
-import Init from 'store/Init';
+import GetDate from 'components/helpers/GetDate';
 
-const rootReducer = (state = Init, { type, payload }) => {
+const rootReducer = (state = { weather: GetDate() }, { type, payload }) => {
   switch (type) {
     case 'REMOVE_ITEM':
       return {
@@ -41,7 +41,15 @@ const rootReducer = (state = Init, { type, payload }) => {
     case 'FAVOURITE':
       return {
         ...state,
-        favourite: [...state.favourite.filter((ev) => ev !== payload), payload],
+        favourite: state.favourite
+          ? [...state.favourite.filter((ev) => ev !== payload), payload]
+          : [payload],
+      };
+
+    case 'DEL_FAVOURITE':
+      return {
+        ...state,
+        favourite: state.favourite.filter((_, idx) => idx !== payload),
       };
 
     default:
