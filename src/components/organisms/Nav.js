@@ -62,7 +62,7 @@ const Search = styled(Input)`
 `;
 
 class Nav extends Component {
-  handleChange = debounce((search = `${this.props.weather.season} ${this.props.weather.part}`) => {
+  handleChange = debounce((search) => {
     const { getSearch } = this.props;
     // eslint-disable-next-line react/no-unused-state
     this.setState({ search }, () => getSearch(search));
