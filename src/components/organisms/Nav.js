@@ -82,7 +82,9 @@ class Nav extends Component {
     const { getSearch, weather } = this.props;
 
     // eslint-disable-next-line react/prop-types
-    getSearch(`${weather.season} ${weather.part}`);
+    if (weather) {
+      getSearch(`${weather.season} ${weather.part}`);
+    }
   }
 
   render() {
@@ -105,7 +107,8 @@ class Nav extends Component {
         <Search
           type="text"
           // eslint-disable-next-line react/prop-types
-          placeholder={`${weather.season} ${weather.part}`}
+          // placeholder={`${weather.season} ${weather.part}`}
+          placeholder="Search"
           onChange={(e) => this.handleChange(e.target.value)}
           ref={this.search}
           // eslint-disable-next-line react/prop-types
