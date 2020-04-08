@@ -62,11 +62,11 @@ const Search = styled(Input)`
 `;
 
 class Nav extends Component {
-  handleChange = debounce((search) => {
+  handleChange = debounce((search = `${this.props.weather.season} ${this.props.weather.part}`) => {
     const { getSearch } = this.props;
+    // eslint-disable-next-line react/no-unused-state
     this.setState({ search }, () => getSearch(search));
     setTimeout(() => {
-      console.log('Witaj po pięciu sekundach!');
       this.search.current.value = '';
     }, 100);
   }, 1000);
@@ -74,15 +74,21 @@ class Nav extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      search: '',
-    };
     this.search = React.createRef();
   }
 
-  render() {
-    const { search } = this.state;
+  componentDidMount() {
+    // eslint-disable-next-line react/prop-types
+    const { getSearch, weather } = this.props;
 
+    // eslint-disable-next-line react/prop-types
+    getSearch(`${weather.season} ${weather.part}`);
+  }
+
+  render() {
+    // eslint-disable-next-line no-unused-vars
+    // eslint-disable-next-line react/prop-types
+    const { weather } = this.props;
     return (
       <MenuWrapper>
         <HeaderTitle>
@@ -98,9 +104,11 @@ class Nav extends Component {
         </Menu>
         <Search
           type="text"
-          placeholder="Search"
+          // eslint-disable-next-line react/prop-types
+          placeholder={`${weather.season} ${weather.part}`}
           onChange={(e) => this.handleChange(e.target.value)}
           ref={this.search}
+          // eslint-disable-next-line react/prop-types
         />
       </MenuWrapper>
     );
@@ -108,11 +116,10 @@ class Nav extends Component {
 }
 
 Nav.propTypes = {
-  search: PropTypes.arrayOf().isRequired,
   getSearch: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = ({ search }) => ({ search });
+const mapStateToProps = ({ search, weather }) => ({ search, weather });
 
 const mapDispatchToProps = (dispatch) => ({
   getSearch: (search) => dispatch(getSearchAction(search)),

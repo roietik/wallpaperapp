@@ -46,3 +46,10 @@ export const getFavourite = (favourite) => {
     payload: favourite,
   };
 };
+
+export const delFavourite = (id) => {
+  return {
+    type: 'DEL_FAVOURITE',
+    payload: id,
+  };
+};
