@@ -16,7 +16,7 @@ const Root = () => {
         <HashRouter>
           <MainTemplate>
             <Switch>
-              <Route exact path={routes.home} render={() => <Redirect to={routes.home} />} />
+              <Route exact path={routes.home} render={() => <Redirect to={routes.main} />} />
               <Route exact path={routes.main} component={Main} />
               <Route exact path={routes.favourite} component={Favourite} />
               <Route exact path={routes.settings} component={Settings} />

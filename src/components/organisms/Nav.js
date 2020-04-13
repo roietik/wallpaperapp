@@ -88,9 +88,6 @@ class Nav extends Component {
   }
 
   render() {
-    // eslint-disable-next-line no-unused-vars
-    // eslint-disable-next-line react/prop-types
-    const { weather } = this.props;
     return (
       <MenuWrapper>
         <HeaderTitle>

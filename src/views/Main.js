@@ -7,6 +7,8 @@ import PhotoGrid from 'components/molecules/PhotoGrid';
 
 class Main extends Component {
   componentDidMount() {
+    console.log('hcjgfcgfchgf radek');
+
     this.getData();
   }
 
