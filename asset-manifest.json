@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/wallpaperapp/static/js/main.930fa95d.chunk.js",
-    "main.js.map": "/wallpaperapp/static/js/main.930fa95d.chunk.js.map",
+    "main.js": "/wallpaperapp/static/js/main.9427a27c.chunk.js",
+    "main.js.map": "/wallpaperapp/static/js/main.9427a27c.chunk.js.map",
     "runtime-main.js": "/wallpaperapp/static/js/runtime-main.5df75e3d.js",
     "runtime-main.js.map": "/wallpaperapp/static/js/runtime-main.5df75e3d.js.map",
     "static/css/2.9de2e04a.chunk.css": "/wallpaperapp/static/css/2.9de2e04a.chunk.css",
     "static/js/2.940c35fd.chunk.js": "/wallpaperapp/static/js/2.940c35fd.chunk.js",
     "static/js/2.940c35fd.chunk.js.map": "/wallpaperapp/static/js/2.940c35fd.chunk.js.map",
     "index.html": "/wallpaperapp/index.html",
-    "precache-manifest.77099f6cbfd15b1b3207812c5bd063ba.js": "/wallpaperapp/precache-manifest.77099f6cbfd15b1b3207812c5bd063ba.js",
+    "precache-manifest.6ca357f1870d0b7396866949874a8ab8.js": "/wallpaperapp/precache-manifest.6ca357f1870d0b7396866949874a8ab8.js",
     "service-worker.js": "/wallpaperapp/service-worker.js",
     "static/css/2.9de2e04a.chunk.css.map": "/wallpaperapp/static/css/2.9de2e04a.chunk.css.map",
     "static/js/2.940c35fd.chunk.js.LICENSE.txt": "/wallpaperapp/static/js/2.940c35fd.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.5df75e3d.js",
     "static/css/2.9de2e04a.chunk.css",
     "static/js/2.940c35fd.chunk.js",
-    "static/js/main.930fa95d.chunk.js"
+    "static/js/main.9427a27c.chunk.js"
   ]
 }
